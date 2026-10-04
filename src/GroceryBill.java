@@ -8,7 +8,7 @@ public class GroceryBill {
 		double monthlyTotal = 0;
 		double monthlyAverage;
 		
-		System.out.println("This program will calculate the average weekly and total monthly grocery bill for a family of four with and without a coupon\n\n");
+		System.out.println("This program will calculate the average weekly and total monthly grocery bill for a family of four with and without a coupon.\n");
 		
 		System.out.print("Please enter the coupon % as a decimal (for example to enter 12% type .12 or 0.12): ");
 		couponDecimal = scnr.nextDouble();
@@ -18,10 +18,9 @@ public class GroceryBill {
 			System.out.println("\nWARNING: Your coupon entry is invalid, the coupon will default to 10%.");
 		}
 		
-		couponPercentage = couponDecimal * 100;
+		couponPercentage = couponDecimal * 100.00;
 		
 		System.out.println("\nThe coupon entered is " + couponPercentage + "%\n");
-		
 		
 		System.out.print("Total grocery bill of Week 1: $");
 		monthlyTotal = scnr.nextDouble() + monthlyTotal;
