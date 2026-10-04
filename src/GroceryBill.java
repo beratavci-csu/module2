@@ -1,43 +1,44 @@
 import java.util.Scanner;
 
 public class GroceryBill {
-	
 	public static void main (String [] args) {
-		
+		Scanner scnr = new Scanner(System.in);
 		double couponDecimal;
+		double couponPercentage;
 		double monthlyTotal = 0;
 		double monthlyAverage;
 		
-		Scanner scnr = new Scanner(System.in);
+		System.out.println("This program will calculate the average weekly and total monthly grocery bill for a family of four with and without a coupon\n\n");
 		
-		System.out.println("This program will calculate the average weekly and the average monthly grocery bill for a family of four");
-		
-		System.out.print("\nPlease enter the coupon % as a decimal (for 12% type .12 or 0.12): ");
+		System.out.print("Please enter the coupon % as a decimal (for example to enter 12% type .12 or 0.12): ");
 		couponDecimal = scnr.nextDouble();
 		
 		if ((couponDecimal <= 0 ) || (couponDecimal > 1)) {
 			couponDecimal = 0.10;
-			System.out.println("\nWARNING: The value you entered either exceeds 100% OR is equal to/less than 0%, entry will default 10%");
+			System.out.println("\nWARNING: Your coupon entry is invalid, the coupon will default to 10%.");
 		}
 		
-		System.out.print("\nThe coupon:  ");
+		couponPercentage = couponDecimal * 100;
+		
+		System.out.println("\nThe coupon entered is " + couponPercentage + "%\n");
 		
 		
-		System.out.print("\nNow, please enter the total grocery bill of week 1: ");
+		System.out.print("Total grocery bill of Week 1: $");
 		monthlyTotal = scnr.nextDouble() + monthlyTotal;
-		System.out.print("\nNow, please enter the total grocery bill of week 2: ");
+		System.out.print("Total grocery bill of Week 2: $");
 		monthlyTotal = scnr.nextDouble() + monthlyTotal;
-		System.out.print("\nNow, please enter the total grocery bill of week 3: ");
+		System.out.print("Total grocery bill of Week 3: $");
 		monthlyTotal = scnr.nextDouble() + monthlyTotal;
-		System.out.print("\nNow, please enter the total grocery bill of week 4: ");
+		System.out.print("Total grocery bill of Week 4: $");
 		monthlyTotal = scnr.nextDouble() + monthlyTotal;
+
 		
-		monthlyAverage = monthlyTotal / 4;
+		monthlyAverage = (monthlyTotal / 4);
 		
-		System.out.println("\nThe monthly total without the coupon is: $" + String.format("%.2f", monthlyTotal));
-		System.out.println("The average weekly cost without the coupon: $" + String.format("%.2f", monthlyAverage));
-		System.out.println("The monthly total with the " + + "coupon is: $" + String.format("%.2f", monthlyTotal * (1 - couponDecimal)));
-		System.out.println("The average weekly cost with the coupon: $" + String.format("%.2f", monthlyAverage * (1 - couponDecimal )));
+		System.out.println("\nMonthly Total Cost: $" + String.format("%.2f", monthlyTotal));
+		System.out.println("Monthly Total Cost with " + couponPercentage + "% coupon is: $" + String.format("%.2f", monthlyTotal * (1 - couponDecimal)));
+		System.out.println("Weekly Average Cost: $" + String.format("%.2f", monthlyAverage));
+		System.out.println("Average Weekly Cost with " + couponPercentage + "% coupon is: $" + String.format("%.2f", monthlyAverage * (1 - couponDecimal )));
 	}
 }
 
