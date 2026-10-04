@@ -35,8 +35,8 @@ public class GroceryBill {
 		
 		
 		System.out.println("\nMonthly Total Cost: $" + String.format("%.2f", monthlyTotal));
-		System.out.println("Monthly Total Cost with " + couponPercentage + "% coupon is: $" + String.format("%.2f", monthlyTotal * (1 - couponDecimal)));
-		System.out.println("Weekly Average Cost: $" + String.format("%.2f", monthlyAverage));
+		System.out.println("Monthly Total Cost with " + couponPercentage + "% coupon is: $" + String.format("%.2f", monthlyTotal * (1 - couponDecimal)) + "\n");
+		System.out.println("Average Weekly Cost: $" + String.format("%.2f", monthlyAverage));
 		System.out.println("Average Weekly Cost with " + couponPercentage + "% coupon is: $" + String.format("%.2f", monthlyAverage * (1 - couponDecimal )));
 	}
 }
