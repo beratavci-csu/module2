@@ -31,8 +31,8 @@ public class GroceryBill {
 		System.out.print("Total grocery bill of Week 4: $");
 		monthlyTotal = scnr.nextDouble() + monthlyTotal;
 
-		
 		monthlyAverage = (monthlyTotal / 4);
+		
 		
 		System.out.println("\nMonthly Total Cost: $" + String.format("%.2f", monthlyTotal));
 		System.out.println("Monthly Total Cost with " + couponPercentage + "% coupon is: $" + String.format("%.2f", monthlyTotal * (1 - couponDecimal)));
@@ -40,6 +40,15 @@ public class GroceryBill {
 		System.out.println("Average Weekly Cost with " + couponPercentage + "% coupon is: $" + String.format("%.2f", monthlyAverage * (1 - couponDecimal )));
 	}
 }
+
+
+
+
+
+
+
+
+
 
 
 
