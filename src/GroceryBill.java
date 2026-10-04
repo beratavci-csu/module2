@@ -20,6 +20,9 @@ public class GroceryBill {
 			System.out.println("\nWARNING: The value you entered either exceeds 100% OR is equal to/less than 0%, entry will default 10%");
 		}
 		
+		System.out.print("\nThe coupon:  ");
+		
+		
 		System.out.print("\nNow, please enter the total grocery bill of week 1: ");
 		monthlyTotal = scnr.nextDouble() + monthlyTotal;
 		System.out.print("\nNow, please enter the total grocery bill of week 2: ");
@@ -33,7 +36,7 @@ public class GroceryBill {
 		
 		System.out.println("\nThe monthly total without the coupon is: $" + String.format("%.2f", monthlyTotal));
 		System.out.println("The average weekly cost without the coupon: $" + String.format("%.2f", monthlyAverage));
-		System.out.println("The monthly total with the coupon is: $" + String.format("%.2f", monthlyTotal * (1 - couponDecimal)));
+		System.out.println("The monthly total with the " + + "coupon is: $" + String.format("%.2f", monthlyTotal * (1 - couponDecimal)));
 		System.out.println("The average weekly cost with the coupon: $" + String.format("%.2f", monthlyAverage * (1 - couponDecimal )));
 	}
 }
